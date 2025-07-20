@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:custom-boardgame": "node dist/custom-boardgame/server/server.mjs",
-    "build:prod": "ng build --configuration=production --base-href /custom-zombicide-web-ui.github.io/"
+    "build:prod": "ng build --configuration=production --base-href /custom-zombicide-web-ui.github.io/",
+    "deploy": "\"ng build --output-path docs --base-href ./ && xcopy /E /Y docs\\\\browser\\\\* docs\\\\ && rmdir /S /Q docs\\\\browser && rmdir /S /Q docs\\\\server"
   },
   "private": true,
   "dependencies": {
